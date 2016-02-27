@@ -26,9 +26,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table View Data
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[self.fetchedResultsController sections] count];
+}
+
+
 #pragma mark - 
 #pragma Fetched REsults Controller Section
-- (NSFetchedResultsController *) fetchedResultsController {
+- (NSFetchedResultsController *) fetchedResultsController
+{
     if (_fetchedResultsController != nil){
         return _fetchedResultsController;
     }

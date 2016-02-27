@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grt-1S-QMD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nMo-rX-CcI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Courses-->
         <scene sceneID="LLU-vf-YrN">
             <objects>
                 <tableViewController id="grt-1S-QMD" customClass="ViewController" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="rQN-5a-K4P">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQN-5a-K4P" id="GzT-52-Zq7">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -28,8 +28,27 @@
                             <outlet property="delegate" destination="grt-1S-QMD" id="Nk0-yH-tWW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Courses" id="bRU-dF-6sv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y43-GA-FqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="404"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P0P-Fe-dax">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nMo-rX-CcI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nPU-o6-rdh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="grt-1S-QMD" kind="relationship" relationship="rootViewController" id="pIW-AJ-Mwj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItA-SA-qyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="404"/>
         </scene>

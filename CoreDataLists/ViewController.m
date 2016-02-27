@@ -45,7 +45,7 @@
     [fetchRequest
         setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
 
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:slec.managedObjectContext sectionNameKeyPath:@"auther" cacheName:nil]
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"author" cacheName:nil]
     
     return _fetchedResultsController;
 }

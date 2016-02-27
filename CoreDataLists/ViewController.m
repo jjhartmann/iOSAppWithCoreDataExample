@@ -32,6 +32,17 @@
     return [[self.fetchedResultsController sections] count];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> secInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [secInfo numberOfObjects];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 #pragma mark - 
 #pragma Fetched REsults Controller Section

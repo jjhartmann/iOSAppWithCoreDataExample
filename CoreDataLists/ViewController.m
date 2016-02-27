@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Courses.h"
 
 @interface ViewController ()
 
@@ -27,21 +28,33 @@
 }
 
 #pragma mark - Table View Data
+////////////////////////////////////////////////////////////////
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [[self.fetchedResultsController sections] count];
 }
 
+/////////////////////////////////////////////////////////////////
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> secInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [secInfo numberOfObjects];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+////////////////////////////////////////////////////////////////
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    // Configure the cell.
+    Courses *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = course.title;   
+
+    return cell;
 }
+
+
 
 
 #pragma mark - 

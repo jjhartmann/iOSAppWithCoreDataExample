@@ -3,7 +3,7 @@
     <entity name="Courses" representedClassName="Courses" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" defaultValueString="J.J. Hartmann" syncable="YES"/>
         <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" defaultValueString="2016-02-27" syncable="YES"/>
     </entity>
     <elements>
         <element name="Courses" positionX="-63" positionY="-18" width="128" height="90"/>

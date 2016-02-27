@@ -17,7 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ViewController *coursesViewC = (ViewController *) self.window.rootViewController;
+    
+    UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+    
+    ViewController *coursesViewC = (ViewController *) [[nav viewControllers] objectAtIndex:0];
     coursesViewC.managedObjectContext = self.managedObjectContext;
     
     return YES;

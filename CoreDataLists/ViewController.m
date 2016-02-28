@@ -15,8 +15,8 @@
 
 @implementation ViewController
 
-@synthesize fetchedResultsController = _fetchedResultsController;
 
+////////////////////////////////////////////////////////////////
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +29,7 @@
     }
 }
 
+////////////////////////////////////////////////////////////////
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -61,6 +62,7 @@
     return cell;
 }
 
+////////////////////////////////////////////////////////////////
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
@@ -71,6 +73,7 @@
 
 #pragma mark - 
 #pragma Fetched REsults Controller Section
+////////////////////////////////////////////////////////////////
 - (NSFetchedResultsController *) fetchedResultsController
 {
     if (_fetchedResultsController != nil){
@@ -79,7 +82,7 @@
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity =
-        [NSEntityDescription entityForName:@"Course"
+        [NSEntityDescription entityForName:@"Courses"
                     inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     

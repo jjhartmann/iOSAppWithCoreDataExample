@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="1486" y="404"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Course View Controller-->
         <scene sceneID="sJH-e5-7Ra">
             <objects>
-                <viewController id="F6c-Ad-p77" sceneMemberID="viewController">
+                <viewController id="F6c-Ad-p77" customClass="AddCourseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7F8-nU-G9P"/>
                         <viewControllerLayoutGuide type="bottom" id="Sqf-xN-CFI"/>
@@ -51,8 +51,58 @@
                     <view key="view" contentMode="scaleToFill" id="HeH-H0-oVA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-Og-j2F">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="New Course" id="S2a-LB-nD8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d3X-ey-d8H"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-un-ECB">
+                                <rect key="frame" x="20" y="77" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-y6-zWf">
+                                <rect key="frame" x="20" y="112" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qau-F6-Pd9">
+                                <rect key="frame" x="66" y="68" width="514" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-pP-Mhx">
+                                <rect key="frame" x="85" y="103" width="495" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-xO-F37">
+                                <rect key="frame" x="0.0" y="179" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478313745.64000797">
+                                    <!--2016-02-28 00:55:45 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rJ-w7-bQw">
+                                <rect key="frame" x="20" y="150" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="authorField" destination="8TB-pP-Mhx" id="KkI-eU-NG0"/>
+                        <outlet property="datePickerField" destination="sfd-xO-F37" id="b7D-fm-mMA"/>
+                        <outlet property="titleField" destination="qau-F6-Pd9" id="MXi-c1-z1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xS-bw-uek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

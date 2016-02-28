@@ -18,6 +18,7 @@
 		777ABA6E1C8182200004E72F /* CoreDataListsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 777ABA6D1C8182200004E72F /* CoreDataListsUITests.m */; };
 		77DBF74B1C82465700B84659 /* Courses+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF7481C82465700B84659 /* Courses+CoreDataProperties.m */; };
 		77DBF74C1C82465700B84659 /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF74A1C82465700B84659 /* Courses.m */; };
+		77DBF7501C82833900B84659 /* AddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF74F1C82833900B84659 /* AddCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		77DBF7481C82465700B84659 /* Courses+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Courses+CoreDataProperties.m"; sourceTree = "<group>"; };
 		77DBF7491C82465700B84659 /* Courses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Courses.h; sourceTree = "<group>"; };
 		77DBF74A1C82465700B84659 /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
+		77DBF74E1C82833900B84659 /* AddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseViewController.h; sourceTree = "<group>"; };
+		77DBF74F1C82833900B84659 /* AddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 		777ABA441C8182200004E72F /* CoreDataLists */ = {
 			isa = PBXGroup;
 			children = (
+				77DBF74E1C82833900B84659 /* AddCourseViewController.h */,
+				77DBF74F1C82833900B84659 /* AddCourseViewController.m */,
 				77DBF7471C82465700B84659 /* Courses+CoreDataProperties.h */,
 				77DBF7481C82465700B84659 /* Courses+CoreDataProperties.m */,
 				77DBF7491C82465700B84659 /* Courses.h */,
@@ -288,6 +293,7 @@
 			files = (
 				777ABA531C8182200004E72F /* CoreDataLists.xcdatamodeld in Sources */,
 				777ABA4D1C8182200004E72F /* ViewController.m in Sources */,
+				77DBF7501C82833900B84659 /* AddCourseViewController.m in Sources */,
 				777ABA4A1C8182200004E72F /* AppDelegate.m in Sources */,
 				77DBF74B1C82465700B84659 /* Courses+CoreDataProperties.m in Sources */,
 				77DBF74C1C82465700B84659 /* Courses.m in Sources */,

@@ -12,7 +12,7 @@
 @protocol AddCourseViewControllerDelegate;
 
 
-@interface AddCourseViewController : UIViewController
+@interface AddCourseViewController : UIViewController 
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextField *authorField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerField;

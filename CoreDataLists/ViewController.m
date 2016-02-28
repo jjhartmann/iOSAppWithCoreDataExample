@@ -20,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error])
+    {
+        NSLog(@"Error! %@", error);
+        abort(); 
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +61,11 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+    
+}
 
 
 

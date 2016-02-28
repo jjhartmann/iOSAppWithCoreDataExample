@@ -8,6 +8,7 @@
 
 #import "Courses.h"
 #import "ViewController.h"
+#import "DisplayEditViewController.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,8 @@
 
 ////////////////////////////////////////////////////////////////
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // Tranistion to add course view
     if ([[segue identifier] isEqualToString:@"addCourse"]) {
         AddCourseViewController *acvc =
         (AddCourseViewController *)[segue destinationViewController];
@@ -48,6 +51,15 @@
                                          inManagedObjectContext:[self managedObjectContext]];
         
         acvc.currentCourse = newCourse;
+    }
+    
+    // Transistion to edit/view course view
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
+        DisplayEditViewController  *dvc = (DisplayEditViewController *) [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Courses *selectedCourse = (Courses *) [self.fetchedResultsController objectAtIndexPath:indexPath];
+        dvc.currentCourse = selectedCourse;
     }
 }
 
@@ -219,5 +231,7 @@ titleForHeaderInSection:(NSInteger)section {
     
     return _fetchedResultsController;
 }
+
+
 
 @end

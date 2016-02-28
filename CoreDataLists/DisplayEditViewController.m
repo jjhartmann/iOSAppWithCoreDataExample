@@ -24,4 +24,23 @@
 }
 
 
+- (IBAction)doneEditing:(id)sender
+{
+    
+}
+
+- (IBAction)startEditing:(id)sender
+{
+    self.titleField.enabled = YES;
+    self.authorField.enabled = YES;
+    self.dateField.enabled = YES;
+    
+    self.titleField.borderStyle = UITextBorderStyleRoundedRect;
+    self.authorField.borderStyle = UITextBorderStyleRoundedRect;
+    self.dateField.hidden = YES;
+    self.datePickerView.hidden = NO;
+    
+    self.editButton.hidden = YES;
+    self.doneButton.hidden = NO;
+}
 @end

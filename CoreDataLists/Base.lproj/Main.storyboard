@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ErP-48-ZJs" kind="showDetail" identifier="showDetail" id="dcZ-iW-23i"/>
+                                    <segue destination="ErP-48-ZJs" kind="show" identifier="showDetail" id="dcZ-iW-23i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="Courses" id="bRU-dF-6sv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n1O-pR-TzK">
                             <connections>
-                                <segue destination="F6c-Ad-p77" kind="modal" identifier="addCourse" id="0T4-M3-IpS"/>
+                                <segue destination="F6c-Ad-p77" kind="presentation" identifier="addCourse" id="0T4-M3-IpS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,37 +56,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-kK-9as">
-                                <rect key="frame" x="20" y="91" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-kK-9as">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfM-7J-BFb">
-                                <rect key="frame" x="20" y="141" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfM-7J-BFb">
+                                <rect key="frame" x="20" y="160" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dlz-3Z-E9f">
-                                <rect key="frame" x="20" y="194" width="560" height="30"/>
+                                <rect key="frame" x="20" y="213" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-r9-FMi">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Lb6-6t-Uo7"/>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2M-8n-0Mu">
+                                <rect key="frame" x="539" y="72" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneEditing:" destination="ErP-48-ZJs" eventType="touchUpInside" id="QRu-eY-nTs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8v-fy-yPK">
+                                <rect key="frame" x="25" y="72" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="startEditing:" destination="ErP-48-ZJs" eventType="touchUpInside" id="vjd-qL-dTX"/>
+                                </connections>
+                            </button>
+                            <datePicker hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-mF-TiU">
+                                <rect key="frame" x="25" y="206" width="551" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478328920.39960301">
+                                    <!--2016-02-28 05:08:40 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="qL9-r9-FMi" secondAttribute="trailing" constant="-20" id="9jz-lf-etA"/>
-                            <constraint firstItem="qL9-r9-FMi" firstAttribute="top" secondItem="Ktc-Un-QFi" secondAttribute="topMargin" id="MI9-BE-kGV"/>
-                            <constraint firstItem="qL9-r9-FMi" firstAttribute="leading" secondItem="Ktc-Un-QFi" secondAttribute="leadingMargin" constant="-20" id="Xqk-En-2AE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6pQ-mF-TiU" secondAttribute="trailing" constant="4" id="64C-uJ-PU0"/>
+                            <constraint firstItem="GfM-7J-BFb" firstAttribute="trailing" secondItem="Ktc-Un-QFi" secondAttribute="trailingMargin" id="CXy-zS-0oj"/>
+                            <constraint firstItem="d2M-8n-0Mu" firstAttribute="trailing" secondItem="Ktc-Un-QFi" secondAttribute="trailingMargin" id="PA3-Bb-H63"/>
+                            <constraint firstItem="I8v-fy-yPK" firstAttribute="top" secondItem="0Gj-lQ-clD" secondAttribute="bottom" constant="8" id="WZL-YW-QxU"/>
+                            <constraint firstItem="I8v-fy-yPK" firstAttribute="leading" secondItem="Ktc-Un-QFi" secondAttribute="leadingMargin" id="fmm-fO-jGU"/>
+                            <constraint firstItem="3EC-kK-9as" firstAttribute="trailing" secondItem="Ktc-Un-QFi" secondAttribute="trailingMargin" id="iXE-wd-BAU"/>
+                            <constraint firstItem="GfM-7J-BFb" firstAttribute="leading" secondItem="Ktc-Un-QFi" secondAttribute="leadingMargin" id="n4Q-EO-YMH"/>
+                            <constraint firstItem="6pQ-mF-TiU" firstAttribute="leading" secondItem="Ktc-Un-QFi" secondAttribute="leadingMargin" constant="5" id="oQU-IT-hju"/>
+                            <constraint firstItem="3EC-kK-9as" firstAttribute="leading" secondItem="Ktc-Un-QFi" secondAttribute="leadingMargin" id="uLX-3c-gwL"/>
+                            <constraint firstItem="d2M-8n-0Mu" firstAttribute="top" secondItem="0Gj-lQ-clD" secondAttribute="bottom" constant="8" id="yhm-Ai-ADp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="authorField" destination="GfM-7J-BFb" id="IhT-7o-Zcv"/>
                         <outlet property="dateField" destination="Dlz-3Z-E9f" id="xU8-oH-xw1"/>
+                        <outlet property="datePickerView" destination="6pQ-mF-TiU" id="lrc-Ob-6Kb"/>
+                        <outlet property="doneButton" destination="d2M-8n-0Mu" id="Hqh-dU-6UG"/>
+                        <outlet property="editButton" destination="I8v-fy-yPK" id="2pX-ky-S0e"/>
                         <outlet property="titleField" destination="3EC-kK-9as" id="Gdd-dg-KJc"/>
                     </connections>
                 </viewController>
@@ -106,23 +131,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-Og-j2F">
-                                <rect key="frame" x="0.0" y="14" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="New Course" id="S2a-LB-nD8">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT">
-                                            <connections>
-                                                <action selector="cancel:" destination="F6c-Ad-p77" id="ljZ-T4-td1"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d3X-ey-d8H">
-                                            <connections>
-                                                <action selector="save:" destination="F6c-Ad-p77" id="Lg2-Y5-biZ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-un-ECB">
                                 <rect key="frame" x="20" y="77" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -157,6 +165,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-Og-j2F">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="New Course" id="S2a-LB-nD8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT">
+                                            <connections>
+                                                <action selector="cancel:" destination="F6c-Ad-p77" id="ljZ-T4-td1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d3X-ey-d8H">
+                                            <connections>
+                                                <action selector="save:" destination="F6c-Ad-p77" id="Lg2-Y5-biZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -194,7 +219,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="grt-1S-QMD" kind="relationship" relationship="rootViewController" id="pIW-AJ-Mwj"/>
+                        <segue destination="grt-1S-QMD" kind="relationship" relationship="rootViewController" id="XGe-tA-K2h"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItA-SA-qyH" userLabel="First Responder" sceneMemberID="firstResponder"/>

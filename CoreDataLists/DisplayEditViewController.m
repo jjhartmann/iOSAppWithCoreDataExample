@@ -7,6 +7,7 @@
 //
 
 #import "DisplayEditViewController.h"
+#import "AppDelegate.h"
 
 @implementation DisplayEditViewController
 
@@ -48,6 +49,11 @@
     
     self.editButton.hidden = NO;
     self.doneButton.hidden = YES;
+    
+     // Save the context
+    AppDelegate *myApp = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    [myApp saveContext];
+    
 }
 
 - (IBAction)startEditing:(id)sender

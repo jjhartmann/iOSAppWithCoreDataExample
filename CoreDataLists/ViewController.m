@@ -172,6 +172,23 @@ titleForHeaderInSection:(NSInteger)section {
     }
 }
 
+////////////////////////////////////////////////////////////////
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSManagedObjectContext *context = [self managedObjectContext];
+        Courses *courseToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [context deleteObject:courseToDelete];
+        
+        NSError *error;
+        if (![context save:&error])
+        {
+            NSLog(@"ERROR! %@", error);
+        }
+    }
+}
+
 #pragma mark -
 #pragma Fetched REsults Controller Section
 ////////////////////////////////////////////////////////////////

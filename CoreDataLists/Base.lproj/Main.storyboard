@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" title="Courses" id="bRU-dF-6sv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n1O-pR-TzK">
                             <connections>
-                                <segue destination="F6c-Ad-p77" kind="modal" id="0T4-M3-IpS"/>
+                                <segue destination="F6c-Ad-p77" kind="modal" identifier="addCourse" id="0T4-M3-IpS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -57,8 +57,16 @@
                                 <rect key="frame" x="0.0" y="14" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="New Course" id="S2a-LB-nD8">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d3X-ey-d8H"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT">
+                                            <connections>
+                                                <action selector="cancel:" destination="F6c-Ad-p77" id="ljZ-T4-td1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d3X-ey-d8H">
+                                            <connections>
+                                                <action selector="save:" destination="F6c-Ad-p77" id="Lg2-Y5-biZ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

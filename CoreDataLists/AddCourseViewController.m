@@ -10,4 +10,13 @@
 
 @implementation AddCourseViewController
 
+- (IBAction)cancel:(id)sender
+{
+    // dismiss and remove object
+}
+
+- (IBAction)save:(id)sender
+{
+    // dismiss modal view controller and save
+}
 @end

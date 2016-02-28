@@ -16,6 +16,20 @@
 @implementation ViewController
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"addCourse"])
+    {
+        AddCourseViewController *acvc = (AddCourseViewController *)[segue destinationViewController];
+        acvc.delegate = self;
+        
+        Courses *newCourse = (Courses *) [NSEntityDescription insertNewObjectForEntityForName:@"Courses" inManagedObjectContext:[self managedObjectContext]];
+        
+        acvc.currentCourse = newCourse;
+    }
+}
+
+
 ////////////////////////////////////////////////////////////////
 - (void)viewDidLoad {
     [super viewDidLoad];

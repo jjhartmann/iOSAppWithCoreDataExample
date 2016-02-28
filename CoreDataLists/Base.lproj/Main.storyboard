@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Courses-->
@@ -52,8 +53,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-Og-j2F">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-Og-j2F">
+                                <rect key="frame" x="0.0" y="14" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="New Course" id="S2a-LB-nD8">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6PQ-JJ-MbT"/>
@@ -61,42 +62,55 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-un-ECB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS0-un-ECB">
                                 <rect key="frame" x="20" y="77" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-y6-zWf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-y6-zWf">
                                 <rect key="frame" x="20" y="112" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qau-F6-Pd9">
-                                <rect key="frame" x="66" y="68" width="514" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-pP-Mhx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-pP-Mhx">
                                 <rect key="frame" x="85" y="103" width="495" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-xO-F37">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-xO-F37">
                                 <rect key="frame" x="0.0" y="179" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="478313745.64000797">
                                     <!--2016-02-28 00:55:45 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rJ-w7-bQw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rJ-w7-bQw">
                                 <rect key="frame" x="20" y="150" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qau-F6-Pd9">
+                                <rect key="frame" x="66" y="68" width="514" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sfd-xO-F37" firstAttribute="leading" secondItem="HeH-H0-oVA" secondAttribute="leadingMargin" constant="-20" id="CsN-1Z-k6g"/>
+                            <constraint firstItem="8TB-pP-Mhx" firstAttribute="leading" secondItem="cH3-y6-zWf" secondAttribute="trailing" constant="8" id="QdL-Jb-ETu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6c6-Og-j2F" secondAttribute="trailing" constant="-20" id="RnW-vP-XQl"/>
+                            <constraint firstItem="6c6-Og-j2F" firstAttribute="top" secondItem="HeH-H0-oVA" secondAttribute="topMargin" constant="14" id="WeJ-YP-nju"/>
+                            <constraint firstItem="sfd-xO-F37" firstAttribute="top" secondItem="7rJ-w7-bQw" secondAttribute="bottom" constant="8" id="ZOf-3E-T0h"/>
+                            <constraint firstItem="qau-F6-Pd9" firstAttribute="leading" secondItem="XS0-un-ECB" secondAttribute="trailing" constant="8" id="ZtL-ie-ggr"/>
+                            <constraint firstItem="qau-F6-Pd9" firstAttribute="trailing" secondItem="HeH-H0-oVA" secondAttribute="trailingMargin" id="rhj-sh-N2C"/>
+                            <constraint firstItem="8TB-pP-Mhx" firstAttribute="top" secondItem="qau-F6-Pd9" secondAttribute="bottom" constant="5" id="sfw-HZ-BD0"/>
+                            <constraint firstItem="6c6-Og-j2F" firstAttribute="leading" secondItem="HeH-H0-oVA" secondAttribute="leadingMargin" constant="-20" id="vvP-gS-GVE"/>
+                            <constraint firstItem="8TB-pP-Mhx" firstAttribute="trailing" secondItem="HeH-H0-oVA" secondAttribute="trailingMargin" id="y6C-vp-g4b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfd-xO-F37" secondAttribute="trailing" constant="-20" id="zrf-jV-4Vs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="authorField" destination="8TB-pP-Mhx" id="KkI-eU-NG0"/>

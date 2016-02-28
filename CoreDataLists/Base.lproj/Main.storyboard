@@ -22,6 +22,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ErP-48-ZJs" kind="showDetail" identifier="showDetail" id="dcZ-iW-23i"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,7 +42,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y43-GA-FqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="404"/>
+            <point key="canvasLocation" x="1398" y="404"/>
+        </scene>
+        <!--Display Edit View Controller-->
+        <scene sceneID="g9m-kr-xWq">
+            <objects>
+                <viewController id="ErP-48-ZJs" customClass="DisplayEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Gj-lQ-clD"/>
+                        <viewControllerLayoutGuide type="bottom" id="qRi-s4-PLm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ktc-Un-QFi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-kK-9as">
+                                <rect key="frame" x="20" y="57" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfM-7J-BFb">
+                                <rect key="frame" x="20" y="107" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dlz-3Z-E9f">
+                                <rect key="frame" x="20" y="160" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorField" destination="GfM-7J-BFb" id="IhT-7o-Zcv"/>
+                        <outlet property="dateField" destination="Dlz-3Z-E9f" id="xU8-oH-xw1"/>
+                        <outlet property="titleField" destination="3EC-kK-9as" id="Gdd-dg-KJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTg-V2-qpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="165"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="sJH-e5-7Ra">
@@ -128,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xS-bw-uek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="404"/>
+            <point key="canvasLocation" x="2200" y="856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P0P-Fe-dax">

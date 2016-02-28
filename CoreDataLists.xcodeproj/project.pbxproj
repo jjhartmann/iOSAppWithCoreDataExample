@@ -19,6 +19,7 @@
 		77DBF74B1C82465700B84659 /* Courses+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF7481C82465700B84659 /* Courses+CoreDataProperties.m */; };
 		77DBF74C1C82465700B84659 /* Courses.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF74A1C82465700B84659 /* Courses.m */; };
 		77DBF7501C82833900B84659 /* AddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF74F1C82833900B84659 /* AddCourseViewController.m */; };
+		77DBF7531C82AB3700B84659 /* DisplayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DBF7521C82AB3700B84659 /* DisplayEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		77DBF74A1C82465700B84659 /* Courses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Courses.m; sourceTree = "<group>"; };
 		77DBF74E1C82833900B84659 /* AddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseViewController.h; sourceTree = "<group>"; };
 		77DBF74F1C82833900B84659 /* AddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseViewController.m; sourceTree = "<group>"; };
+		77DBF7511C82AB3700B84659 /* DisplayEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayEditViewController.h; sourceTree = "<group>"; };
+		77DBF7521C82AB3700B84659 /* DisplayEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				777ABA4B1C8182200004E72F /* ViewController.h */,
 				777ABA4C1C8182200004E72F /* ViewController.m */,
 				777ABA4E1C8182200004E72F /* Main.storyboard */,
+				77DBF7511C82AB3700B84659 /* DisplayEditViewController.h */,
+				77DBF7521C82AB3700B84659 /* DisplayEditViewController.m */,
 				777ABA541C8182200004E72F /* Assets.xcassets */,
 				777ABA561C8182200004E72F /* LaunchScreen.storyboard */,
 				777ABA591C8182200004E72F /* Info.plist */,
@@ -292,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				777ABA531C8182200004E72F /* CoreDataLists.xcdatamodeld in Sources */,
+				77DBF7531C82AB3700B84659 /* DisplayEditViewController.m in Sources */,
 				777ABA4D1C8182200004E72F /* ViewController.m in Sources */,
 				77DBF7501C82833900B84659 /* AddCourseViewController.m in Sources */,
 				777ABA4A1C8182200004E72F /* AppDelegate.m in Sources */,
